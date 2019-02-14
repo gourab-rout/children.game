@@ -43,7 +43,7 @@ public class ChildrenGame {
 			return resultList;
 		} catch (IllegalArgumentException e) {
 			System.err.println("k and n must be valid positive integers");
-			return resultList;
+			throw e;
 		} catch (Exception e) {
 			System.err.println("Generic error ");
 			return resultList;
