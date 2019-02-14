@@ -1,23 +1,25 @@
 package com.sv.children.game;
 
+import static org.junit.Assert.assertEquals;
+
 import java.util.*;
 
-import junit.framework.Test;
-import junit.framework.TestCase;
-import junit.framework.TestSuite;
+import com.sv.children.game.ChildrenGame;
+import org.junit.*;
+
 
 /**
  * Unit test for simple App.
  */
 public class AppTest 
-    extends TestCase
-{
+   {
 	ChildrenGame j = new ChildrenGame();
 	
     /**
      * Test positive scenario :-)
      */
-    public void testAppSuccessCase()
+	@Test
+	public void testAppSuccessCase()
     {
     	ArrayList<String> expectedList = new ArrayList<String>();
     	expectedList.add("id-2");
@@ -28,8 +30,16 @@ public class AppTest
         List<String> actualList = j.printEliminationOrder(2, 4);
         
         assertEquals(actualList, expectedList);
- 
-        
     }
+    
+    /**
+     * Test negative scenario :-(
+     */
+	@Test(expected = IllegalArgumentException.class)    
+    public void testAppFailureCase()
+    {
+    	j.printEliminationOrder(2, 0);
+    
+    }   
     
 }
