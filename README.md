@@ -23,7 +23,7 @@ https://docs.docker.com/install/
 ## Installing
 Clone the project from GitHub using the below command.
 ```
-https://github.com/gourab-rout/children.game.git
+git clone https://github.com/gourab-rout/children.game.git
 ```
 
 Please run the below mvn command from the directory where pom.xml resides.
