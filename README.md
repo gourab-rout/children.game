@@ -1,5 +1,5 @@
 
-# children.game
+# children game
 This project will take two inputs.
 * Number of children standing around the circle.
 * Elimination number
